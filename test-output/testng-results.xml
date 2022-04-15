@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-12T22:22:54 MST" name="My suite" finished-at="2022-04-12T22:22:54 MST" duration-ms="86">
+    <groups>
+      <group name="check1">
+        <method signature="DependsOnGroupsxml.step1()[pri:0, instance:dependency.DependsOnGroupsxml@15bbf42f]" name="step1" class="dependency.DependsOnGroupsxml"/>
+      </group> <!-- check1 -->
+      <group name="check2">
+        <method signature="DependsOnGroupsxml.step2()[pri:0, instance:dependency.DependsOnGroupsxml@15bbf42f]" name="step2" class="dependency.DependsOnGroupsxml"/>
+      </group> <!-- check2 -->
+      <group name="mainStep">
+        <method signature="DependsOnGroupsxml.step3()[pri:0, instance:dependency.DependsOnGroupsxml@15bbf42f]" name="step3" class="dependency.DependsOnGroupsxml"/>
+      </group> <!-- mainStep -->
+    </groups>
+    <test started-at="2022-04-12T22:22:54 MST" name="My suite" finished-at="2022-04-12T22:22:54 MST" duration-ms="86">
+      <class name="dependency.DependsOnGroupsxml">
+        <test-method signature="step2()[pri:0, instance:dependency.DependsOnGroupsxml@15bbf42f]" started-at="2022-04-12T22:22:54 MST" name="step2" finished-at="2022-04-12T22:22:54 MST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step2 -->
+        <test-method signature="step1()[pri:0, instance:dependency.DependsOnGroupsxml@15bbf42f]" started-at="2022-04-12T22:22:54 MST" name="step1" depends-on-groups="check2" finished-at="2022-04-12T22:22:54 MST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step1 -->
+        <test-method signature="step3()[pri:0, instance:dependency.DependsOnGroupsxml@15bbf42f]" started-at="2022-04-12T22:22:54 MST" name="step3" depends-on-groups="check1" finished-at="2022-04-12T22:22:54 MST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- step3 -->
+      </class> <!-- dependency.DependsOnGroupsxml -->
+    </test> <!-- My suite -->
+  </suite> <!-- My suite -->
+</testng-results>

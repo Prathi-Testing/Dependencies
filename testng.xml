@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="My suite">
+<test name="My suite">
+	<groups>
+    <dependencies>
+      <group name="mainStep" depends-on="check1" />
+	  <group name="check1" depends-on="check2" />
+    </dependencies> 
+  	</groups>
+	<classes>
+	<class name="dependency.DependsOnGroupsxml"></class>
+    </classes>
+</test>
+</suite>
